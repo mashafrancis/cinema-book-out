@@ -1,0 +1,78 @@
+{
+  "name": "cinema-booking-be",
+  "description": "Cinema booking app",
+  "version": "0.0.0",
+  "homepage": "",
+  "main": "src",
+  "keywords": [
+    "feathers"
+  ],
+  "author": {
+    "name": "Francis Masha",
+    "email": "francismasha96@gmail.com"
+  },
+  "contributors": [],
+  "bugs": {},
+  "directories": {
+    "lib": "src",
+    "test": "test/"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "yarn": ">= 0.18.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "serve": "node --inspect --trace-warnings --max-old-space-size=8192 build/app.js",
+    "start:dev": "NODE_ENV=development nodemon",
+    "start": "NODE_ENV=production yarn run build && yarn run serve",
+    "test": "yarn run eslint && yarn run mocha",
+    "eslint": "eslint src/. test/. --config .eslintrc.js",
+    "mocha": "mocha test/ --recursive --exit"
+  },
+  "dependencies": {
+    "@feathersjs/configuration": "^4.5.8",
+    "@feathersjs/errors": "^4.5.8",
+    "@feathersjs/express": "^4.5.8",
+    "@feathersjs/feathers": "^4.5.8",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "feathers": "^2.2.4",
+    "feathers-configuration": "^0.4.2",
+    "feathers-errors": "^2.9.2",
+    "feathers-hooks": "^2.1.2",
+    "feathers-hooks-common": "^5.0.3",
+    "feathers-rest": "^1.8.1",
+    "feathers-sequelize": "^6.2.0",
+    "feathers-swagger": "^1.2.1",
+    "helmet": "^4.1.0",
+    "pg": "^8.3.3",
+    "pg-hstore": "^2.3.3",
+    "reflect-metadata": "^0.1.13",
+    "sequelize": "^6.3.5",
+    "sequelize-typescript": "^1.1.0",
+    "serve-favicon": "^2.5.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.7.0",
+    "@types/cors": "^2.8.7",
+    "@types/helmet": "^0.0.48",
+    "@types/node": "^14.6.2",
+    "@types/sequelize": "^4.28.9",
+    "@types/winston": "^2.4.4",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.1",
+    "eslint": "^7.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "mocha": "^8.1.3",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.1",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  }
+}
